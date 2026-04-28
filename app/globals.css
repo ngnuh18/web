@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --background: #5eedf0;
+  --foreground: #000000;
+}
+
+body {
+  background: linear-gradient(-45deg, #4d72c9, #234f96, #0ea5e9, #2563eb);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* animation chạy ngang */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* container chạy */
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+/* hover vào dừng */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* logo */
+.logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* hover logo */
+.logo:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #22c55e);
+}
