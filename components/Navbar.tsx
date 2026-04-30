@@ -51,7 +51,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             className="relative px-6 py-2.5 rounded-xl font-semibold text-white overflow-hidden
-            bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500
+            bg-gradient-to-r from-pink-500 via-cyan-500 to-pink-500
             bg-[length:200%_100%] hover:bg-[position:100%_0]
             shadow-lg hover:shadow-cyan-400/50
             transition-all duration-500 hover:scale-105 active:scale-90 group"

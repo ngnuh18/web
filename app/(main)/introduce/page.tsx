@@ -1,8 +1,9 @@
+
 export default function IntroducePage() {
   return (
     <div className="py-10 max-w-4xl mx-auto px-4">
       <h2 className="text-3xl font-bold mb-6">Introduce</h2>
-      <div className="overflow-hidden w-full">
+      <div className="overflow-x-hidden w-full">
         <div className="flex animate-scroll gap-8 whitespace-nowrap min-w-max">
 
           {/* dãy 1 */}
@@ -169,7 +170,9 @@ export default function IntroducePage() {
         href="https://zalo.me/342689059"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600"
+        className="fixed bottom-5 right-5 w-14 h-14 flex items-center justify-center 
+  bg-pink-500 text-white rounded-full shadow-lg 
+  hover:scale-110 hover:bg-pink-600 transition-all duration-300"
       >
         🐶
       </a>

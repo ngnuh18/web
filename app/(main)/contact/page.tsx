@@ -8,7 +8,7 @@ export default function ContactPage() {
         href="https://zalo.me/342689059"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition"
+        className="inline-block bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 transition"
       >
         Chat ngay 🐶
       </a>
@@ -18,7 +18,7 @@ export default function ContactPage() {
         href="https://zalo.me/342689059"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600"
+        className="fixed bottom-5 right-5 bg-pink-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-pink-600"
       >
         🐶
       </a>

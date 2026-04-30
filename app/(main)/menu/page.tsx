@@ -46,7 +46,7 @@ export default function AboutPage() {
         {skills.map((skill) => (
           <span
             key={skill}
-            className="px-4 py-2 bg-green-200 text-green-800 rounded-full font-medium hover:bg-green-300 transition"
+            className="px-4 py-2 bg-pink-200 text-pink-800 rounded-full font-medium hover:bg-pink-300 transition"
           >
             {skill}
           </span>
