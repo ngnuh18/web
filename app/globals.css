@@ -1,22 +1,24 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+/* ===== ROOT ===== */
 :root {
   --background: #5eedf0;
   --foreground: #000000;
 }
 
-
+/* ===== BACKGROUND CHÍNH ===== */
 body {
   background: linear-gradient(135deg,
-        #ffd6e0 0%,
-        #ff9bb3 50%,
-        #ff5c8a 100%);
+      #ffd6e0 0%,
+      #ff9bb3 50%,
+      #ff5c8a 100%);
   background-size: 400% 400%;
   animation: gradientMove 10s ease infinite;
+  min-height: 100vh;
 }
 
-
+/* gradient chạy */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -30,6 +32,8 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/* ===== SCROLL ANIMATION (GIỮ 1 LẦN DUY NHẤT) ===== */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -40,29 +44,16 @@ body {
   }
 }
 
-/* animation chạy ngang */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* container chạy */
 .animate-scroll {
   display: flex;
   animation: scroll 20s linear infinite;
 }
 
-/* hover vào dừng */
 .animate-scroll:hover {
   animation-play-state: paused;
 }
 
-/* logo */
+/* ===== LOGO ===== */
 .logo {
   width: 56px;
   height: 56px;
@@ -70,32 +61,13 @@ body {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* hover logo */
 .logo:hover {
   transform: scale(1.2);
   filter: drop-shadow(0 0 6px #22c55e);
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-.bg {
-  position: relative;
-  min-height: 100vh;
+html,
+body {
   overflow-x: hidden;
 }
