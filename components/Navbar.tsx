@@ -42,19 +42,25 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.path}
-              className={`relative px-3 py-1.5 rounded-lg transition
-              ${pathname === item.path ? "text-white bg-white/10" : "text-gray-300"}`}
+              className={`px-3 py-1.5 rounded-lg transition ${pathname === item.path
+                  ? "text-white bg-white/10"
+                  : "text-gray-300 hover:text-white"
+                }`}
             >
               {item.name}
             </Link>
           ))}
 
-          {/* Contact button */}
+          {/* Contact button (fixed đẹp + ổn định) */}
           <Link
             href="/contact"
             className="px-5 py-2 rounded-xl font-semibold text-white
             bg-gradient-to-r from-pink-500 via-cyan-500 to-pink-500
-            hover:scale-105 transition"
+            bg-[length:200%_100%] bg-left
+            shadow-lg shadow-pink-500/20
+            transition-all duration-500
+            hover:bg-right hover:scale-105 hover:shadow-cyan-400/40
+            active:scale-95"
           >
             Contact
           </Link>
@@ -70,8 +76,10 @@ export default function Navbar() {
               key={index}
               href={item.path}
               onClick={() => setOpen(false)}
-              className={`px-3 py-2 rounded-lg transition
-              ${pathname === item.path ? "bg-white/20 text-white" : "text-gray-300"}`}
+              className={`px-3 py-2 rounded-lg transition ${pathname === item.path
+                  ? "bg-white/20 text-white"
+                  : "text-gray-300"
+                }`}
             >
               {item.name}
             </Link>
@@ -80,8 +88,12 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="text-center px-4 py-2 rounded-xl font-semibold text-white
-            bg-gradient-to-r from-pink-500 via-cyan-500 to-pink-500"
+            className="px-5 py-2.5 rounded-xl font-semibold text-white text-center
+            bg-gradient-to-r from-pink-500 via-cyan-500 to-pink-500
+            bg-[length:200%_100%] bg-left
+            shadow-lg shadow-pink-500/20
+            transition-all duration-500
+            hover:bg-right hover:scale-105"
           >
             Contact
           </Link>
