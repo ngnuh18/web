@@ -1,57 +1,145 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { Row, Col, Card, Typography, Tag, Button } from "antd";
+
+const { Title, Text } = Typography;
 
 export default function AboutPage() {
   const skills = ["Dinh dưỡng", "Sức khỏe", "Lông mượt", "Thư giãn", "Sạch sẽ"];
 
   return (
-    <div className="py-10 max-w-5xl mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-6 text-center">Menu</h2>
+    <div style={{ padding: "40px", maxWidth: "1100px", margin: "auto" }}>
 
-      {/* Hình ảnh */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-        <div className="text-center">
-          <img
-            src="/images/menu.jpg"
-            alt="Menu"
-            width={500}
-            height={300}
-            className="rounded-xl shadow-lg w-full object-cover"
-          />
-          <p className="mt-2 text-sm text-white font-medium">
-            🐶 Thức ăn dinh dưỡng cho thú cưng🐱
-          </p>
-        </div>
-        
+      {/* Title */}
+      <Title level={2} style={{ textAlign: "center" }}>
+        Menu Dịch Vụ
+      </Title>
 
-        <div className="text-center">
-          <img
-            src="/images/spa.jpg"
-            alt="Menu Spa"
-            width={500}
-            height={300}
-            className="rounded-xl shadow-lg w-full object-cover"
-          />
-          <p className="mt-2 text-sm text-white font-medium">
-            🐶 Dịch vụ spa cho thú cưng🐱
-          </p>
-        </div>
+      {/* Cards */}
+      <Row gutter={[20, 20]} style={{ marginTop: "30px" }}>
 
-        
-      </div>
+        {/* FOOD */}
+        <Col xs={24} md={12}>
+          <Card
+            hoverable
+            style={{ borderRadius: "16px", overflow: "hidden" }}
+            cover={
+              <div style={{ position: "relative" }}>
+                <img
+                  src="/images/menu.jpg"
+                  alt="Menu"
+                  style={{
+                    height: "260px",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+
+                <Tag
+                  color="red"
+                  style={{
+                    position: "absolute",
+                    top: 10,
+                    left: 10,
+                    fontWeight: "bold",
+                  }}
+                >
+                  HOT
+                </Tag>
+              </div>
+            }
+          >
+            <Title level={4}>Thức ăn thú cưng</Title>
+            <Text>
+              🐶 Pate, hạt dinh dưỡng, đồ ăn sạch cho chó mèo
+            </Text>
+
+            <br /><br />
+
+            <Button
+              type="primary"
+              block
+              href="https://thepet.vn/san-pham/"
+              target="_blank"
+            >
+              Xem chi tiết
+            </Button>
+          </Card>
+        </Col>
+
+        {/* SPA */}
+        <Col xs={24} md={12}>
+          <Card
+            hoverable
+            style={{ borderRadius: "16px", overflow: "hidden" }}
+            cover={
+              <div style={{ position: "relative" }}>
+                <img
+                  src="/images/spa.jpg"
+                  alt="Spa"
+                  style={{
+                    height: "260px",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+
+                <Tag
+                  color="green"
+                  style={{
+                    position: "absolute",
+                    top: 10,
+                    left: 10,
+                    fontWeight: "bold",
+                  }}
+                >
+                  NEW
+                </Tag>
+              </div>
+            }
+          >
+            <Title level={4}>Spa thú cưng</Title>
+            <Text>
+              🛁 Tắm, cắt tỉa lông, chăm sóc toàn diện
+            </Text>
+
+            <br /><br />
+
+            {/* 👉 FIX Ở ĐÂY */}
+            <Link href="/contact">
+              <Button type="primary" block>
+                Đặt lịch ngay
+              </Button>
+            </Link>
+
+          </Card>
+        </Col>
+
+      </Row>
 
       {/* Benefit */}
-      <h3 className="text-2xl font-semibold mb-4 text-center">Benefit</h3>
+      <Title level={3} style={{ textAlign: "center", marginTop: "50px" }}>
+        Lợi ích
+      </Title>
 
-      <div className="flex flex-wrap justify-center gap-3">
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
         {skills.map((skill) => (
-          <span
+          <Tag
             key={skill}
-            className="px-4 py-2 bg-pink-200 text-pink-800 rounded-full font-medium hover:bg-pink-300 transition"
+            color="pink"
+            style={{
+              padding: "10px 18px",
+              fontSize: "14px",
+              borderRadius: "20px",
+              margin: "6px",
+            }}
           >
             {skill}
-          </span>
+          </Tag>
         ))}
       </div>
+
     </div>
   );
 }

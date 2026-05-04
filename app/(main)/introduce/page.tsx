@@ -97,14 +97,6 @@ export default function IntroducePage() {
           Hình ảnh Pate tươi The Pet Vietnam
         </p>
       </div>
-      <div className="mt-6 flex justify-center divide-x divide-gray-300">
-        <img src="/images/1.jpg" className="w-50 h-40 px-4" />
-        <img src="/images/2.jpg" className="w-50 h-40 px-4" />
-        <img src="/images/3.webp" className="w-50 h-40 px-4" />
-        <img src="/images/4.jpg" className="w-50 h-40 px-4" />
-        <img src="/images/5.jpg" className="w-50 h-40 px-4" />
-        <img src="/images/6.png" className="w-50 h-40 px-4" />
-      </div>
       <h2 className="mt-3 text-1x5 font-bold mb-6">2019</h2>
       <hr className="my-6 border-gray-200" />
       <h2 className="text-3xl font-bold mb-6">King's Pet</h2>

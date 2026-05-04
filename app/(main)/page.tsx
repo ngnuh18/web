@@ -18,10 +18,10 @@ transition duration-500 hover:scale-105">
         />
 
       </div>
-      <h1 className="text-5xl font-extrabold mb-4">THE PET VIETNAM</h1>
+      <h1 className="text-3xl md:text-5xl font-extrabold mb-4">THE PET VIETNAM</h1>
       <p className="text-xl text-white-600 max-w-2xl mb-8">
 Công ty TNHH TMDV Thú Cưng Việt Nam (The Pet Viet Nam Trading Services Company)      </p>
-      <div style={{ display: "flex", gap: "10px" }}> 
+      <div className="flex flex-col md:flex-row gap-3">
         <Link href="/introduce" className="px-6 py-3 bg-pink-900 text-white rounded-lg font-semibold hover:bg-pink-700 transition">
           Introduce
         </Link>

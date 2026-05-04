@@ -1,5 +1,8 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
+import "antd/dist/reset.css";
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
